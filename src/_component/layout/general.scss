@@ -5,15 +5,57 @@ body {
   padding: 0;
 }
 body {
-  background-image: url(#{$baseUrl}asset/image/become-a-web-developer-today.jpg);
-  background-size: cover;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+  background: #262322;
 }
 .content {
-  padding: 1rem;
-  background-color: rgba(255, 255, 255, 0.9);
-  border-radius: 1rem;
+  // padding: 1rem;
+}
+
+.navigation {
+  display: flex;
+  justify-content: center;
+}
+
+.home-title {
+  text-align: center;
+  padding: 10px;
+  width: 30%;
+  border: 2px solid #f896d8;
+  background: 50% 100% / 50% 50% no-repeat
+    radial-gradient(ellipse at bottom, #f4d35e, transparent, transparent);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  font-family: "Source Sans Pro", sans-serif;
+  animation: reveal 3000ms ease-in-out forwards 200ms,
+    glow 2500ms linear infinite 2000ms;
+
+  @keyframes reveal {
+    80% {
+      letter-spacing: 8px;
+    }
+    100% {
+      background-size: 300% 300%;
+    }
+  }
+  @keyframes glow {
+    40% {
+      text-shadow: 0 0 8px #fff;
+    }
+  }
+}
+.nav-link {
+  font-size: 30px;
+  padding: 5px 10px;
+  color: #61e294;
+  border: 2px solid #7bcdba;
+  border-radius: 3px;
+  margin: 5px;
+  text-decoration: none;
+
+  &:hover {
+    background-color: #ebebd3;
+    color: #f95738;
+    border: 2px solid #f4d35e;
+  }
 }

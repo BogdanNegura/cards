@@ -10,6 +10,11 @@ html(lang="en")
   body
     .content
       block awesome-content
+        h1.home-title Styled Card
+        nav.navigation
+          a.nav-link(href="/user-profile-card") User Profile
+          a.nav-link(href="/card-2") Card 2
+
     //- The style.css is at the bottom so it doesn't
     //- block the loading of assets
     if config.entry.css.external
